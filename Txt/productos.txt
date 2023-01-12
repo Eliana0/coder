@@ -1,0 +1,91 @@
+[
+  {
+    "nombre": "Flan",
+    "timestamp": "Wed Dec 07 2022 14:35:05 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "azucar",
+      "leche",
+      "huevo",
+      "caramelo",
+      "crema"
+    ],
+    "foto": "https://th.bing.com/th/id/R.1528ec1e2d18e1ecd13df4d855e15124?rik=cyJxqLiod1zz4g&pid=ImgRaw&r=0",
+    "precio": 900,
+    "stock": 18,
+    "id": 1
+  },
+  {
+    "nombre": "Pizza",
+    "timestamp": "Wed Dec 07 2022 14:35:05 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "pan",
+      "salsa",
+      "queso",
+      "oregano",
+      "aceituna"
+    ],
+    "foto": "https://th.bing.com/th/id/R.04e8468107b1d1527b88aa703c2067fe?rik=iNk79rzOu73sEw&pid=ImgRaw&r=0",
+    "precio": 1500,
+    "stock": 9,
+    "id": 2
+  },
+  {
+    "nombre": "Hamburguesa",
+    "timestamp": "Wed Dec 07 2022 14:35:05 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "pan",
+      "carne",
+      "queso",
+      "lechuga",
+      "tomate"
+    ],
+    "foto": "https://th.bing.com/th/id/R.f9bb03c6cca539df7b4a0c943c3e87cf?rik=xNZbflDfnYOfmQ&pid=ImgRaw&r=0",
+    "precio": 1400,
+    "stock": 33,
+    "id": 3
+  },
+  {
+    "nombre": "Milanesa Napolitana",
+    "timestamp": "Wed Dec 07 2022 14:35:05 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "milanesa",
+      "salsa",
+      "queso",
+      "papas fritas"
+    ],
+    "foto": "https://lachimenearestaurante.com.ar/wp-content/uploads/2020/05/Milanesa-a-la-Napolitana-2048x1367.jpg",
+    "precio": 1800,
+    "stock": 10,
+    "id": 4
+  },
+  {
+    "nombre": "Papas fritas",
+    "timestamp": "Wed Dec 07 2022 14:48:13 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "papas",
+      "sal",
+      "queso",
+      "aceite"
+    ],
+    "foto": "https://th.bing.com/th/id/R.3cd70497d2b8b97e208007219f1e647a?rik=hZ3ziYRkoDYKPQ&pid=ImgRaw&r=0",
+    "precio": 1600,
+    "stock": 12,
+    "id": 5
+  },
+  {
+    "nombre": "Tacos",
+    "timestamp": "Thu Dec 08 2022 19:44:47 GMT-0300 (hora estándar de Argentina)",
+    "descripción": [
+      "tortilla",
+      "carne",
+      "cebolla",
+      "morrón",
+      "queso",
+      "salsa"
+      ],
+      "foto": "https://th.bing.com/th/id/R.b9e921aeea76c1f79e4633e40543e0ee?rik=6rz2nNSRd7t3Ew&pid=ImgRaw&r=0",
+      "precio": 2400,
+      "stock": 4,
+      "id": 6
+      }
+]
