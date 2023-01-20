@@ -1,5 +1,5 @@
 const options = require(`../options/mysql.config`)
-const knex = require(`knex`)
+const knex = require("knex")
 
 const database = knex(options)
 

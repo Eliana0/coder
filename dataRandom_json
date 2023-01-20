@@ -1,0 +1,27 @@
+[
+  {
+    "id": 52013,
+    "price": 5126,
+    "image": "http://placeimg.com/640/480/nature"
+  },
+  {
+    "id": 28084,
+    "price": 89066,
+    "image": "http://placeimg.com/640/480/nature"
+  },
+  {
+    "id": 50002,
+    "price": 42197,
+    "image": "http://placeimg.com/640/480/nature"
+  },
+  {
+    "id": 74961,
+    "price": 10532,
+    "image": "http://placeimg.com/640/480/nature"
+  },
+  {
+    "id": 2313,
+    "price": 77720,
+    "image": "http://placeimg.com/640/480/sports"
+  }
+]
