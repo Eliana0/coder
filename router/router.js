@@ -6,9 +6,9 @@ const contenedor = new Contenedor()
 
 router.get('/', (req, res)=> {
         contenedor.getAll()
-/*         .then(result => 
+        .then(result => 
             res.send(result))
-        .catch(err => console.log(err)) */
+        .catch(err => console.log(err))
 })
 
 router.post('/', (req, res)=> {

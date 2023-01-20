@@ -10,18 +10,6 @@ let products = [
     price: 2500,
     stock: 4
     },
-/*     {
-    name: "Pizza",
-    foto: "https://th.bing.com/th/id/R.04e8468107b1d1527b88aa703c2067ferik=iNk79rzOu73sEwpid=ImgRawr=0",
-    price: 1500,
-    stock: 9
-    } */
-/*     {
-    name: "Papas fritas",
-    foto: "https://th.bing.com/th/id/R.3cd70497d2b8b97e208007219f1e647a?rik=hZ3ziYRkoDYKPQ&pid=ImgRaw&r=0",
-    price: 1600,
-    stock: 12
-  } */
 ]
 
 class Contenedor {

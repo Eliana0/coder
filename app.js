@@ -25,11 +25,8 @@ app.listen(8080, ()=> console.log(`hola ` + PORT))
 /* app.use('/productos', productosApi)
 app.use('/api/productos-test', productosRandom) */
 
-/* app.listen(app.get("port"), () => {
-    console.log("hola " + PORT)
-}) */
 
-const sessionChecker = (req, res, next) => {
+const checkUser = (req, res, next) => {
     if(req.session.user && req.cookies.user_sid){
         res.redirect('/dashboard')
     }else{
@@ -37,54 +34,30 @@ const sessionChecker = (req, res, next) => {
     }
 }
 
-app.get('/', sessionChecker, (req, res) => {
+app.get('/', checkUser, (req, res) => {
     res.redirect('/login')
 })
 
 app.route('/login').get((req, res) => {
     res.sendFile(__dirname + '/public/login.html')
+}).post((req, res) => {
+    let user = new User({
+        name: req.body.name
+    })
+    user.save((err, docs) => {
+        if(err) {
+            res.redirect('/login')
+        }else{
+            req.session.user = docs,
+            res.redirect('/singup')
+        }
+    })
 })
 
-app.route('/singup').get(sessionChecker, (req, res) => {
-    res.sendFile(__dirname + '/public/singup.html')
-})/* .post(req, res) */
-
-
-
-/* app.use(session({
-    store: new Store({
-        path: "./session",
-        ttl: 900,
-    }),
-    secret: "c0d3r",
-    resave: true,
-    saveUninitialized: true,
-}))
-
-app.get('/', (req, res) => {
-    req.session.user = {
-        username: "eliana",
-        role: "admin"
+app.route('/singup').get((req, res) => {
+    if(req.session.user && req.cookies.user_sid){
+        res.sendFile(__dirname + '/public/singup.html')
+    }else{
+        res.redirect('/login')
     }
-    res.send({ message: 'ok' })
 })
-
-app.get('/currentUser', (req, res) => {
-    res.send(req.session.user)
-}) */
-
-
-
-/* app.get('/set-cookie', (req, res) => {
-    res.cookie('cristaldo', 'holis jajaj').send({message: "ola ke ase"})
-})
-app.get('/get-cookie', (req, res) => {
-    res.send(req.cookies)
-})
-app.get('/clear', (req, res) => {
-    res.clearCookie('cristaldo').send({message: "Cookie borrada"})
-})
-app.get('/clear/:nombre', (req, res) => {
-    const { nombre } = req.params
-    res.clearCookie(nombre).send({message: "Cookie borrada"})
-}) */

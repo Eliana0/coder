@@ -6,18 +6,9 @@ mongoose.connect("mongodb://localhost:27017/coder", {
 })
 
 const userSchema = mongoose.Schema({
-    username: {
+    name: {
         type: String,
         unique: true,
-        required: true,
-    },
-    email: {
-        type: String,
-        unique: true,
-        required: true,
-    },
-    password: {
-        type: String,
         required: true,
     }
 })
