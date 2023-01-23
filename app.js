@@ -14,9 +14,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
-/*     store: new Store({
-        ttl: 15
-    }), */
+    store: new Store({
+        ttl: 60
+    }),
     key: "user_sid",
     secret: "c0d3r",
     resave: true,
@@ -42,32 +42,49 @@ app.get('/', sessionChecher, (req, res) => {
 
 app.route('/login').get((req, res) => {
     res.sendFile(__dirname + '/public/login.html')
+}).post((req, res) => {
+    let name = req.body
+    let user = User.find({name}).exec()
+    let usuario = req.body.name
+    if(!user){
+        res.redirect('/login') 
+    } 
+    req.session.user = user
+    res.send(`Bienvenido ${usuario}
+                    <a href="/logout"><button type="button" class="btn btn-info">Deslogueo</button></a>`)
+
 })
 
 app.route('/singup').get(sessionChecher, (req, res) => {
     res.sendFile(__dirname + '/public/singup.html')
-}).post((req, res) => {
+}).post(async (req, res) => {
     let user = new User({
         name: req.body.name
     })
-    user.save((err, docs) => {
-        if(err) {
-            res.redirect('/singup')
-        }else{
-            req.session.user = docs
-            res.redirect('/out')
-        }
+        user.save((err, docs) => {
+            if(err) {
+                res.redirect('/singup')
+            }else{
+                req.session.user = docs
+                res.redirect('/out')
+            }
     })
 })
+
 
 app.get('/logout', (req, res) => {
     if(req.session.user && req.cookies.user_sid){
         res.clearCookie('user_sid')
+        res.redirect('/login')
     }else{
         res.redirect('/login')
     }
 })
 
 app.get('/out', (req, res) => {
-    res.sendFile(__dirname + '/public/out.html')
+    if(req.session.user && req.cookies.user_sid){
+        res.sendFile(__dirname + '/public/out.html')
+    }else{
+        res.redirect('/login')
+    }
 })
