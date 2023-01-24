@@ -19,6 +19,7 @@ app.use(session({
     }),
     key: "user_sid",
     secret: "c0d3r",
+    cookie: {maxAge: 60000},
     resave: true,
     saveUninitialized: true
 }))
@@ -42,17 +43,17 @@ app.get('/', sessionChecher, (req, res) => {
 
 app.route('/login').get((req, res) => {
     res.sendFile(__dirname + '/public/login.html')
-}).post((req, res) => {
-    let name = req.body
-    let user = User.find({name}).exec()
-    let usuario = req.body.name
-    if(!user){
-        res.redirect('/login') 
-    } 
-    req.session.user = user
-    res.send(`Bienvenido ${usuario}
-                    <a href="/logout"><button type="button" class="btn btn-info">Deslogueo</button></a>`)
-
+}).post(async (req, res) => {
+    let {name} = req.body
+    try{
+        let user = await User.findOne({ name }).exec()
+        if(!user){
+            res.redirect('/login') 
+        } else{
+            req.session.user = user
+            res.redirect('/out')
+        }
+    }catch(err){console.log(err)}
 })
 
 app.route('/singup').get(sessionChecher, (req, res) => {
@@ -71,11 +72,12 @@ app.route('/singup').get(sessionChecher, (req, res) => {
     })
 })
 
-
 app.get('/logout', (req, res) => {
     if(req.session.user && req.cookies.user_sid){
+        let usuario = req.body.name
         res.clearCookie('user_sid')
-        res.redirect('/login')
+        res.send(`Hasta luego ${usuario}`)
+        res.redirect('/')
     }else{
         res.redirect('/login')
     }
