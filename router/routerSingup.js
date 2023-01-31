@@ -1,6 +1,15 @@
 import express from "express";
-const router = express.Router();
 import { User } from '../models/User.js'
+import { initializePassport } from '../passport.config.js'
+import { passwordHash } from '../crypt.js'
+import passport from 'passport'
+
+const router = express.Router();
+const app = express()
+
+initializePassport()
+app.use(passport.initialize())
+app.use(passport.session())
 
 const sessionChecher = (req, res, next) => {
     if(req.session.user && req.cookies.user_sid){
@@ -14,12 +23,15 @@ router.get('/', sessionChecher, (req, res) => {
     res.render("singup.ejs")
 })
 
-router.post('/',async (req, res) => {
+router.post('/', async (req, res) => {
     req.session.user = {
-        name: req.body.name
+        name: req.body.name,
+        mail: req.body.name,
+        password: req.body.password
     }
+    let password= req.body.password;
     let user = new User({
-        password: req.body.password,
+        password: passwordHash(password),
         mail: req.body.mail,
         name: req.body.name
     })

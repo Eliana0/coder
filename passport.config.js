@@ -37,12 +37,12 @@ export const initializePassport = () => {
         'login',
         new LocalSrtategy(
             async(name, password, done) => {
-                try{
-                    let users = await User.findOne({ name })
-                    if(!users) return done(null, false)
-                    if(!hashOut) return done(null, false)
-                    return done(null, users)
-                }catch(err){
+                try {
+                    let user = await User.findOne({ name })
+                    if (!user) return done(null, false)
+                    if (!hashOut(user, password)) return done(null, false)
+                    return done(null, user)
+                } catch(err) {
                     done(err)
                 }
             }
@@ -65,7 +65,7 @@ export const initializePassport = () => {
             async (req, name, password, done) => {
                 try {
                     let user = await User.findOne({ name })
-                    if (user) return done(null, false) //error, data
+                    if (user) return done(null, false)
                     const newUser = {
                         name,
                         password: passwordHash(password),

@@ -7,9 +7,21 @@ mongoose.connect("mongodb://localhost:27017/coder", {
 })
 
 const userSchema = new mongoose.Schema({
-    name: String,
-    mail: String,
-    password: String
+    name: {
+        type: String,
+        unique: true,
+        required: true,
+    },
+    password:  {
+        type: String,
+        unique: true,
+        required: true,
+    },
+    mail:  {
+        type: String,
+        unique: true,
+        required: true,
+    }
 })
 
 export const  User  = mongoose.model("User", userSchema)
