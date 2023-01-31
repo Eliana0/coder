@@ -7,12 +7,20 @@
     <body class="container">
         <h1>Registro de usuario</h1>
         <a href="login">Login</a>
-        <form autocomplete="off" action="/singup" method="post">
+        <form autocomplete="off" action="/singup" method="post" id="formRegistro">
             <div class="page-header">
                 <label>Ingrese su nombre</label>
                 <input class="form-control" required type="text" name="name"/>
             </div>
-            <input class="btn btn-primary" type="submit" value="Registro"/>
+            <div class="page-header">
+                <label>Ingrese su mail</label>
+                <input class="form-control" required type="text" name="mail"/>
+            </div>
+            <div class="page-header">
+                <label>Ingrese su contraseña</label>
+                <input class="form-control" required type="password" name="password"/>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Registro" id="btnRegistro"/>
         </form>
 
     </body>

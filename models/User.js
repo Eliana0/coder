@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 mongoose.set('strictQuery', false);
 mongoose.connect("mongodb://localhost:27017/coder", {
@@ -6,13 +6,10 @@ mongoose.connect("mongodb://localhost:27017/coder", {
     useUnifiedTopology: true
 })
 
-const userSchema = mongoose.Schema({
-    name: {
-        type: String,
-        unique: true,
-        required: true,
-    }
+const userSchema = new mongoose.Schema({
+    name: String,
+    mail: String,
+    password: String
 })
 
-const userModel = mongoose.model('user', userSchema)
-module.exports = userModel
+export const  User  = mongoose.model("User", userSchema)
