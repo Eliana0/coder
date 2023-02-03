@@ -1,15 +1,10 @@
 import express from "express";
 import { User } from '../models/User.js'
-import { initializePassport } from '../passport.config.js'
 import { passwordHash } from '../crypt.js'
-import passport from 'passport'
 
 const router = express.Router();
 const app = express()
 
-initializePassport()
-app.use(passport.initialize())
-app.use(passport.session())
 
 const sessionChecher = (req, res, next) => {
     if(req.session.user && req.cookies.user_sid){
