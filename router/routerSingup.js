@@ -14,27 +14,30 @@ const sessionChecher = (req, res, next) => {
     }
 }
 
-const verifiData = ()=> {
-    let {name, mail, password} = data
-    if (name.length <= 2) alert('Su nombre de usuario debe tener al menos 3 caracteres.')
-    if (password.length <= 5 ) alert('Su contraseña debe tener al menos 6 caracteres.')
-    if (!mail.split("@") && !mail.split(".com"))alert('El correo ingresado es invalido, ingrese su correo original.')
-    else{return {success: 'Se registro correctamente', datos: data}}
-   }
+/* const verifiData = (req, res) => {
+    let {name, mail, password} = req.body
+    if (name.length <= 2) return {message: 'Su nombre de usuario debe tener al menos 3 caracteres.'}
+    if (password.length <= 5 ) return {message: 'Su contraseña debe tener al menos 6 caracteres.'}
+    if (!mail.split("@") && !mail.split(".com")) return {message: 'El correo ingresado es invalido, ingrese su correo original.'}
+   } */
 
 router.get('/', sessionChecher, (req, res) => {
     res.render("singup.ejs")
 })
 
-router.post('/', verifiData, async (req, res) => {
+router.post('/'/* , verifiData */, async (req, res) => {
+    let {name, mail, password} = req.body
+    if (name.length <= 2) return {message: 'Su nombre de usuario debe tener al menos 3 caracteres.'}
+    if (password.length <= 5 ) return {message: 'Su contraseña debe tener al menos 6 caracteres.'}
+    if (!mail.split("@") && !mail.split(".com")) return {message: 'El correo ingresado es invalido, ingrese su correo original.'}
     req.session.user = {
         name: req.body.name,
         mail: req.body.name,
         password: req.body.password
     }
-    let password= req.body.password;
+    let pass= req.body.password;
     let user = new User({
-        password: passwordHash(password),
+        password: passwordHash(pass),
         mail: req.body.mail,
         name: req.body.name
     })
