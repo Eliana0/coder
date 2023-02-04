@@ -15,8 +15,10 @@ router.post('/', async (req, res) => {
         let user = await User.findOne({ mail }).exec()
         if(!user){
             res.redirect('/login') 
+            alert('Usuario no registrado')
         }if (!hashOut(user, password)) {
             res.redirect('/login')
+            alert('Usuario no registrado')
         }
             req.session.user = user;
             res.redirect('/out')

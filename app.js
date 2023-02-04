@@ -1,14 +1,11 @@
 import routerLogin from "./router/routerLogin.js"
-import routerLogout from "./router/routerLogin.js"
+import routerLogout from "./router/routerLogout.js"
 import routerSingup from "./router/routerSingup.js"
 import routerOut from "./router/routerOut.js"
-import routerAuth from "./router/routerAuth.js"
-import GoogleSrtategy from "./google.js"
 import express from "express"
 import session from "express-session"
 import MongoStore from 'connect-mongo'
 import cookieParser from "cookie-parser"
-import passport from "passport"
 
 const PORT = process.env.PORT || 8080
 const app = express()
@@ -26,11 +23,7 @@ app.use(session({
     saveUninitialized: true
 }))
 
-app.use(passport.initialize())
-passport.use(GoogleSrtategy)
-
 app.use('/login', routerLogin)
 app.use('/logout', routerLogout)
 app.use('/singup', routerSingup)
 app.use('/out', routerOut)
-app.use('/auth', routerAuth)

@@ -14,11 +14,19 @@ const sessionChecher = (req, res, next) => {
     }
 }
 
+const verifiData = ()=> {
+    let {name, mail, password} = data
+    if (name.length <= 2) alert('Su nombre de usuario debe tener al menos 3 caracteres.')
+    if (password.length <= 5 ) alert('Su contraseña debe tener al menos 6 caracteres.')
+    if (!mail.split("@") && !mail.split(".com"))alert('El correo ingresado es invalido, ingrese su correo original.')
+    else{return {success: 'Se registro correctamente', datos: data}}
+   }
+
 router.get('/', sessionChecher, (req, res) => {
     res.render("singup.ejs")
 })
 
-router.post('/', async (req, res) => {
+router.post('/', verifiData, async (req, res) => {
     req.session.user = {
         name: req.body.name,
         mail: req.body.name,
