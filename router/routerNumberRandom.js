@@ -1,5 +1,5 @@
-import express from "express";
-import { fork } from "child_process"
+const express = require("express");
+const { fork } = require("child_process")
 const router = express.Router();
 
 //1 número random del 1 al 100
@@ -9,12 +9,14 @@ router.get(`/`, (req, res) => {
     res.send(`${random}`)
 })
 
-//100 números random del 1 al 10000
-router.get(`/number`, (req, res) => {
-    const result = fork(`functions/numberRandom`)
+//x números random del 1 al 1000
+router.get(`/:number`, (req, res) => {
+    const cant = req.params.number;
+    const result = fork(`./functions/numberRandoms.js`)
+    result.send(cant)
     result.on('message', data => {
         res.send(`${data}`)
     })
 })
 
-export default router;
+module.exports = router;

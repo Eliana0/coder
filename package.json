@@ -10,7 +10,7 @@
     "url": "git+https://github.com/Eliana0/Cristaldo.Proyecto1.git"
   },
   "keywords": [],
-  "type": "module", 
+  "type": "commonjs", 
   "author": "",
   "license": "ISC",
   "bugs": {
