@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -10,7 +11,7 @@
     "url": "git+https://github.com/Eliana0/Cristaldo.Proyecto1.git"
   },
   "keywords": [],
-  "type": "commonjs", 
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/Eliana0/Cristaldo.Proyecto1#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cluster": "^0.7.7",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
