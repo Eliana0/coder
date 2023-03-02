@@ -1,10 +1,9 @@
 import express from "express";
-import { User } from '../models/User.js'
-import { passwordHash } from '../crypt.js'
+import validateUsers from '../functions/validateUsers.js'
+import createLogger from "../functions/logger.js"
 
 const router = express.Router();
-const app = express()
-
+const logger = createLogger('PROD')
 
 const sessionChecher = (req, res, next) => {
     if(req.session.user && req.cookies.user_sid){
@@ -15,29 +14,11 @@ const sessionChecher = (req, res, next) => {
 }
 
 router.get('/', sessionChecher, (req, res) => {
+    logger.warn('ingreso a la ruta /singup')
     res.render("singup.ejs")
 })
 
-router.post('/', async (req, res) => {
-    req.session.user = {
-        name: req.body.name,
-        mail: req.body.name,
-        password: req.body.password
-    }
-    let pass= req.body.password;
-    let user = new User({
-        password: passwordHash(pass),
-        mail: req.body.mail,
-        name: req.body.name
-    })
-    user.save((err, docs) => {
-        if(err) {
-            res.redirect('/singup')
-        }else{
-            req.session.user = docs
-            res.redirect('/out')
-        }
-    })
+router.post('/', validateUsers, async (req, res) => {
 })
 
 export default router;
