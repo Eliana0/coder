@@ -8,7 +8,6 @@ const logger = createLogger('DEV')
 //1 número random del 1 al 100
 router.get(`/`, (req, res) => {
     logger.warn('ingreso a la ruta api/Randoms')
-    logger.info('ingreso a la ruta api/Randoms')
     let random = Math.random();
     random = Math.trunc(random * 100 + 1);
     res.send(`${random}`)

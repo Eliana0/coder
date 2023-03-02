@@ -1,8 +1,8 @@
 import winston from 'winston'
 
 //env:
-//PROD = Graba información a documentos
-//ENV = Pasa información por console
+//PROD = Graba información específica a documentos
+//ENV = Pasa toda información por consola
 
 const createLogger = (env) => {
     if(env === 'PROD'){
