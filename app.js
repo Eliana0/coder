@@ -9,19 +9,12 @@ import express from "express"
 import session from "express-session"
 import MongoStore from 'connect-mongo'
 import cookieParser from "cookie-parser"
+import compression from 'compression'
 
 const PORT = process.env.PORT || 8080
 const app = express()
 
-//EJECUCIÓN
-//forever => forever start app.js FORK/(CLUSTER nofund)
-//           forever stop app.js
-//pm2 => pm2 start app.js = FORK
-//       pm2 start app.js -i número de instancias = CLUSTER
-//       pm2 start app.js -i max
-//       pm2 delete app.js
-//       pm2 delete all app.js
-
+compression()
 ports(app) 
 
 app.use(express.urlencoded({extended:true}))
