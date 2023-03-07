@@ -9,13 +9,12 @@ const logger = createLogger('DEV')
 router.get(`/`, (req, res) => {
     logger.warn('ingreso a la ruta api/Randoms')
     let random = Math.random();
-    random = Math.trunc(random * 100 + 1);
+    random = Math.trunc(random * 100);
     res.send(`${random}`)
 })
 
 //x números random del 1 al 1000
-router.get(`/:number`, (req, res) => {
-    logger.warn('ingreso a la ruta api/Randoms/number')
+router.get( `/:number`, (req, res) => {
     const cant = req.params.number;
     const result = fork(`./functions/numberRandoms.js`)
     result.send(cant)

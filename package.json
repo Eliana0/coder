@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Eliana0/Cristaldo.Proyecto1#readme",
   "dependencies": {
+    "artillery": "^2.0.0-30",
     "bcrypt": "^5.1.0",
     "cluster": "^0.7.7",
     "compression": "^1.7.4",

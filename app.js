@@ -11,7 +11,6 @@ import MongoStore from 'connect-mongo'
 import cookieParser from "cookie-parser"
 import compression from 'compression'
 
-const PORT = process.env.PORT || 8080
 const app = express()
 
 compression()
