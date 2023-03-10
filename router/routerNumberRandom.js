@@ -14,7 +14,7 @@ router.get(`/`, (req, res) => {
 })
 
 //x números random del 1 al 1000
-router.get( `/:number`, (req, res) => {
+router.get(`/:number`, (req, res) => {
     const cant = req.params.number;
     const result = fork(`./functions/numberRandoms.js`)
     result.send(cant)
