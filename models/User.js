@@ -1,12 +1,15 @@
 import mongoose from 'mongoose'
+import dotenv from "dotenv"
+
+dotenv.config()
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/coder", {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
-const userSchema = new mongoose.Schema({
+export const userSchema = new mongoose.Schema({
     name: {
         type: String,
         unique: true,

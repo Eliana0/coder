@@ -1,14 +1,15 @@
 import express from "express";
 import createLogger from "../functions/logger.js"
+import mongoose from "mongoose";
 
 const logger = createLogger('PROD')
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    if(req.session.user && req.cookies.user_sid){
+    if(mongoose.user && req.cookies.user_sid){
         logger.warn('ingreso a la ruta /logout')
         res.clearCookie('user_sid')
-        res.send(`Hasta luego ` + req.session.user.name + '<a href="/login"><button type="button" class="btn btn-info">Inicio</button></a>');
+        res.send(`Hasta luego ` + mongoose.user.name + '<a href="/login"><button type="button" class="btn btn-info">Inicio</button></a>');
         delete req.body.name;
         res.redirect('/')
     }else{

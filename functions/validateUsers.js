@@ -1,6 +1,7 @@
 import { User } from '../models/User.js'
 import { passwordHash } from '../crypt.js'
 import createLogger from "../functions/logger.js"
+import mongoose from 'mongoose'
 
 const logger = createLogger('PROD')
 
@@ -20,7 +21,7 @@ const validateUsers = (req, res, next) => {
             if(err) {
                 res.redirect('/singup')
             }else{
-                req.session.user = docs
+                mongoose.user = docs
                 res.redirect('/out')
             }
         })

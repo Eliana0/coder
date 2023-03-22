@@ -5,3 +5,52 @@
 {"level":"warn","message":"ingreso a la ruta /info"}
 {"level":"warn","message":"ingreso a la ruta /info"}
 {"level":"warn","message":"ingreso a la ruta /info"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"error","message":"Se necesita un usuario son mas de 5 caracteres"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"error","message":"Se necesita un usuario son mas de 5 caracteres"}
+{"level":"warn","message":"Se registró un nuevo usuario"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}

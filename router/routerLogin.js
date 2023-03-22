@@ -2,6 +2,7 @@ import express from "express";
 import { User } from '../models/User.js'
 import { hashOut } from '../crypt.js'
 import createLogger from "../functions/logger.js"
+import mongoose from "mongoose";
 
 const router = express.Router();
 const logger = createLogger('PROD')
@@ -25,7 +26,7 @@ router.post('/', async (req, res) => {
             alert('Usuario no registrado')
             logger.error('Usuario no registrado')
         }
-            req.session.user = user;
+            mongoose.user = user;
             res.redirect('/out')
     }catch(err){console.log(err)}
 })
