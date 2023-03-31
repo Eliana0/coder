@@ -1,13 +1,8 @@
-import admin from "firebase-admin"
-import fs from "fs"
-const serviceAccount = JSON.parse(fs.readFileSync("./firebase_productos.json", `utf-8`)) 
-
-admin.initializeApp({credential: admin.credential.cert(serviceAccount)});
+import mongoose from "mongoose";
 
 class ProductContent {
-    constructor(productos) {
-        const db = admin.firestore()
-        this.products = db.collection(productos)
+    constructor(productos, products) {
+        this.products = mongoose.model(productos, products)
     }
     
     Save = async(archivo) => {

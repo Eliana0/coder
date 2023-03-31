@@ -24,6 +24,26 @@ export const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true,
+    },
+    adress: {
+        type: String,
+        unique: true,
+        required: false, 
+    },
+    age: {
+        type: Number,
+        unique: true,
+        required: false, 
+    },
+    number: {
+        type: Number,
+        unique: true,
+        required: true, 
+    },
+    img: {
+        type: String,
+        unique: true,
+        required: false, 
     }
 })
 

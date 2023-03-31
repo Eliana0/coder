@@ -1,6 +1,6 @@
 import express from "express";
 import { User } from '../models/User.js'
-import { hashOut } from '../crypt.js'
+import { hashOut } from '../functions/crypt.js'
 import createLogger from "../functions/logger.js"
 import mongoose from "mongoose";
 
@@ -19,11 +19,11 @@ router.post('/', async (req, res) => {
         let user = await User.findOne({ mail }).exec()
         if(!user){
             res.redirect('/login') 
-            alert('Usuario no registrado')
+            res.send('Usuario no registrado')
             logger.error('Usuario no registrado')
         }if (!hashOut(user, password)) {
             res.redirect('/login')
-            alert('Usuario no registrado')
+            res.send('Usuario no registrado')
             logger.error('Usuario no registrado')
         }
             mongoose.user = user;

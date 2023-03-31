@@ -8,8 +8,8 @@ const createLogger = (env) => {
     if(env === 'PROD'){
         return winston.createLogger({
             transports: [
-                new winston.transports.File({ filename: './router/files/warn.log', level: 'warn' }),
-                new winston.transports.File({ filename: './router/files/error.log', level: 'error' })
+                new winston.transports.File({ filename: './src/router/files/warn.log', level: 'warn' }),
+                new winston.transports.File({ filename: './src/router/files/error.log', level: 'error' })
             ]
         })
     }else {

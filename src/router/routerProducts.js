@@ -1,11 +1,12 @@
 import { Router } from 'express';
-
-const fecha = Date()
+import mongoose from 'mongoose'
 const router = Router();
+const fecha = Date()
+
 let productsDao
 
-import('../daos/daos.productos.js').then(({FirebaseProducts})=>{
-    productsDao = new FirebaseProducts();
+ import('../daos/daos.productos.js').then(({prod})=>{
+    productsDao = new prod();
  })
 
 let archivo = {
@@ -27,7 +28,7 @@ let archivo = {
 router.get('/', (req, res)=> {
     productsDao.getAll()
         .then(result => 
-            res.send(result))
+            res.send(`${result}`))
         .catch(err => console.log(err))
 })
 

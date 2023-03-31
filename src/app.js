@@ -5,7 +5,6 @@ import routerLogout from "./router/routerLogout.js"
 import routerSingup from "./router/routerSingup.js"
 import routerOut from "./router/routerOut.js"
 import routerInfo from "./router/routerInfo.js"
-import routerNumberRandom from "./router/routerNumberRandom.js"
 import ports from "./functions/ejecuciónPort.js"
 import express from "express"
 import session from "express-session"
@@ -22,19 +21,17 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
-    store: MongoStore.create({ mongoUrl: "mongodb://localhost:27017" }),
+    store: MongoStore.create({ mongoUrl: "mongodb://localhost:27017/sessions" }),
     key: "user_sid",
     secret: "c0d3r",
     resave: true,
     saveUninitialized: true
 }))
 
-
 app.use('/login', routerLogin)
 app.use('/logout', routerLogout)
 app.use('/singup', routerSingup)
 app.use('/out', routerOut)
 app.use('/info', routerInfo)
-app.use('/api/randoms', routerNumberRandom)
 app.use('/products', routerProducts)
 app.use('/cart', routerCarrito)
