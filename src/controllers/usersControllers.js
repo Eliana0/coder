@@ -2,6 +2,7 @@ import mongoose from "mongoose"
 import userContent from "../contents/user.content.js"
 import createLogger from "../functions/logger.js"
 import { hashOut } from '../functions/crypt.js'
+import usersDTO from "../dtos/dtos.users.js"
 
 const usercontent = new userContent()
 const logger = createLogger('PROD')
@@ -26,7 +27,7 @@ const postLogin = async(req, res) => {
 
 const getOut = async (req, res) => {
     if(mongoose.user && req.cookies.user_sid){
-        let user = mongoose.user
+        let user = new usersDTO(mongoose.user)
         logger.warn('ingreso a la ruta /out')
         res.render("out.ejs", {user: user})
    }else{

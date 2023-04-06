@@ -76,3 +76,20 @@
 {"level":"warn","message":"Se registró un nuevo usuario"}
 {"level":"warn","message":"ingreso a la ruta /out"}
 {"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}

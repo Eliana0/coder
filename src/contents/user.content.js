@@ -3,7 +3,7 @@ import { passwordHash } from "../functions/crypt.js"
 
 class userContent {
     constructor() {
-        this.use =  User
+        this.use = User
     }
 
     addLogin = async(mail) => {
@@ -16,7 +16,7 @@ class userContent {
     newUser = async(name, mail, password, adress, age, number, img) => {
         try{
             let pass= password;
-            let user = new User({
+            let user = new this.use({
                 password: passwordHash(pass),
                 mail: mail,
                 name: name,

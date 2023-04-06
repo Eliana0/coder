@@ -1,8 +1,4 @@
-import createLogger from "../functions/logger.js"
-import usersControllers from "../controllers/usersControllers.js";
 import mongoose from "mongoose";
-
-const logger = createLogger('PROD')
 
 //SINGUP
 
