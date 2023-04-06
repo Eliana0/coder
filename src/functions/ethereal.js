@@ -1,5 +1,4 @@
 import { createTransport } from "nodemailer"
-import mongoose from "mongoose"
 
 const TEST_MAIL = process.env.TEST_MAIL
 const RES_MAIL = 'elianamariacristaldo@gmail.com'

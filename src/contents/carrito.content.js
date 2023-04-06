@@ -1,5 +1,4 @@
 import mongoose from "mongoose"
-import { Carrito } from "../models/carrito.models.js"
 
 class Contenedor {
     constructor(productos, Carrito) {
