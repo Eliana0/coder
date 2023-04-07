@@ -22,7 +22,7 @@ const postLogin = async(req, res) => {
         logger.error('Usuario no registrado')
     }
     mongoose.user = user;
-    res.redirect('/out')
+    res.redirect('/')
 }
 
 const getOut = async (req, res) => {
@@ -58,7 +58,7 @@ const newUser = async (req, res) => {
             res.redirect('/singup')
         }else{
             mongoose.user = docs
-            res.redirect('/out')
+            res.redirect('/')
         }
     })
 

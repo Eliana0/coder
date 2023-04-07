@@ -93,3 +93,5 @@
 {"level":"warn","message":"ingreso a la ruta /out"}
 {"level":"warn","message":"ingreso a la ruta /login"}
 {"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}

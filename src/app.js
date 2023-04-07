@@ -31,7 +31,7 @@ app.use(session({
 app.use('/login', routerLogin)
 app.use('/logout', routerLogout)
 app.use('/singup', routerSingup)
-app.use('/out', routerOut)
+app.use('/', routerOut)
 app.use('/info', routerInfo)
 app.use('/products', routerProducts)
 app.use('/cart', routerCarrito)
