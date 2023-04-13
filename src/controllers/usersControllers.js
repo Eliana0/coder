@@ -14,11 +14,9 @@ const postLogin = async(req, res) => {
     let user = await usercontent.addLogin(mail)
     if(!user){
         res.redirect('/login') 
-        res.send('Usuario no registrado')
         logger.error('Usuario no registrado')
     }if(!hashOut(user, password)){
         res.redirect('/login')
-        res.send('Usuario no registrado')
         logger.error('Usuario no registrado')
     }
     mongoose.user = user;
@@ -42,7 +40,6 @@ const getLogout = async (req, res) => {
         res.clearCookie('user_sid')
         res.send(`Hasta luego ` + mongoose.user.name + '<a href="/login"><button type="button" class="btn btn-info">Inicio</button></a>');
         delete req.body.name;
-        res.redirect('/')
     }else{
         logger.error('No puede acceder al /logout, no está registrado')
         res.redirect('/login')
@@ -61,12 +58,19 @@ const newUser = async (req, res) => {
             res.redirect('/')
         }
     })
+}
 
+const deleteUser = async (req, res) => {
+    logger.warn('ingreso a la ruta /deleteUser')
+    const mail= mongoose.user.mail;
+    await usercontent.deleteUser(mail)
+    res.send('Usuario borrado')
 }
 
 export default {
     postLogin,
     getLogout,
     getOut,
-    newUser
+    newUser,
+    deleteUser
 }

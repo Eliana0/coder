@@ -95,3 +95,223 @@
 {"level":"warn","message":"ingreso a la ruta /out"}
 {"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
 {"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"No puede acceder al /logout, no está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"No puede acceder al /logout, no está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"error","message":"No puede acceder al /logout, no está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"No puede acceder al /logout, no está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /logout"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"No puede acceder al /deleteUser, no está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /singup"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"error","message":"Usuario no registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"error","message":"ingreso a la ruta /out denegado. No está registrado"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /login"}
+{"level":"warn","message":"ingreso a la ruta /out"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}
+{"level":"warn","message":"ingreso a la ruta /deleteUser"}

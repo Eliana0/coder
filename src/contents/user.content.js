@@ -1,5 +1,6 @@
 import { User } from "../models/User.js"
 import { passwordHash } from "../functions/crypt.js"
+import { SyncMapInstance } from "twilio/lib/rest/preview/sync/service/syncMap.js"
 
 class userContent {
     constructor() {
@@ -27,6 +28,10 @@ class userContent {
             })
             return user
         }catch(err){console.log(err)}
+    }
+    deleteUser = async( mail ) => {
+        let borrar = await this.use.findOneAndDelete({ mail }).exec()
+        return borrar
     }
 }
 

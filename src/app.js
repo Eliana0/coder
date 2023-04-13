@@ -1,10 +1,12 @@
-import routerProducts from './router/routerProducts.js';
-import routerCarrito from './router/routerCart.js';
+import routerOut from "./router/routerOut.js"
 import routerLogin from "./router/routerLogin.js"
 import routerLogout from "./router/routerLogout.js"
 import routerSingup from "./router/routerSingup.js"
-import routerOut from "./router/routerOut.js"
 import routerInfo from "./router/routerInfo.js"
+import routerProducts from './router/routerProducts.js';
+import routerCarrito from './router/routerCart.js';
+import routerDelete from './router/routerDeleteUser.js'
+
 import ports from "./functions/ejecuciónPort.js"
 import express from "express"
 import session from "express-session"
@@ -28,10 +30,11 @@ app.use(session({
     saveUninitialized: true
 }))
 
+app.use('/', routerOut)
 app.use('/login', routerLogin)
 app.use('/logout', routerLogout)
 app.use('/singup', routerSingup)
-app.use('/', routerOut)
 app.use('/info', routerInfo)
 app.use('/products', routerProducts)
 app.use('/cart', routerCarrito)
+app.use('/deleteUser', routerDelete)
