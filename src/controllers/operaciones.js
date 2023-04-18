@@ -1,10 +1,8 @@
-import mongoose from "mongoose";
-
 //SINGUP
 
 export const sessionChecher = (req, res, next) => {
-    if(mongoose.user && req.cookies.user_sid){
-        res.redirect('/out')
+    if(req.session.user && req.cookies.user_sid){
+        res.redirect('/')
     }else{
         next()
     }

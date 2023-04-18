@@ -1,40 +1,45 @@
-import mongoose from "mongoose";
+import { Products } from "../models/productos.models.js"
 
 class ProductContent {
-    constructor(productos, products) {
-        this.products = mongoose.model(productos, products)
+    constructor() {
+        this.products = Products
     }
     
-    Save = async(archivo) => {
+    Save = async(name, timestamp, descripción, foto, precio, stock) => {
         try{
-            await this.products.add(archivo)
+            let product = new this.products({
+                name: name,
+                timestamp: timestamp, 
+                descripción: descripción,
+                foto: foto,
+                precio: precio,
+                stock: stock
+            })
+            return product
         }catch(err){return err}
     }
     getAll = async() => {
         try{
-            const getProducts = await this.products.get()
-            let res = getProducts.forEach(e => console.log({ id: e.id, ...e.data() }));
-            return res
+            let all = await this.products.find()
+            return all
         }catch(err){return err}
     }
-    getById = async(id) => {
+    getById = async(_id) => {
         try{
-        const doc = this.products.doc(`${id}`);
-        const item = await doc.get();
-        const response = item.data();
-            return response
+            const product = await this.products.findById({ _id }).exec();
+            return product
         }catch(err){return err}
     }
-    update = async(id, archivo) => {
+    update = async(_id, precio, stock) => {
         try{
-            await this.products.doc(`${id}`).update(archivo)
+            await this.products.findByIdAndUpdate(_id, { precio: `${precio}`, stock: `${stock}` })
         }catch(err){return err}
     }
-    delete = async(id) => { 
+    delete = async(_id) => { 
         try{
-            await this.products.doc(`${id}`).delete()
+            await this.products.findByIdAndDelete({ _id })
         }catch(err){return err}
     }
 }
 
-export const Content = ("ProductContent", ProductContent)
+export default ProductContent

@@ -1,44 +1,59 @@
 import mongoose from "mongoose"
+import { Products } from "../models/productos.models.js"
+import { User } from "../models/User.js"
+import { Carrito } from "../models/carrito.models.js"
 
 class Contenedor {
-    constructor(productos, Carrito) {
-        this.products = mongoose.model(productos, Carrito)
+    constructor() {
+        this.products = Products
+        this.user = User
+        this.cart = Carrito
     }
 
-    Save = async(archivo) => {
+    Save = async(nombre, timestamp, foto, precio) => {
         try{
-            const newMensaje = new this.products.create(archivo)
-            return newMensaje
+            const newProduct = new this.cart({
+                nombre: nombre, 
+                timestamp: timestamp,  
+                foto: foto, 
+                precio: precio 
+            })
+            return newProduct
         }catch(err){return err}
     }
     
     getAll = async() => {
         try{
-            const get = await this.products.find()
+            const get = await this.cart.find()
             return get 
         }catch(err){return err}
     }  
     
-    getById = async(id) => {
+    getById = async(_id) => {
         try{
-            const getById = await this.products.findById(id)
+            const getById = await this.cart.findById(_id)
             return getById
         }catch(err){return err}
     }
     
-    update = async(id, archivo) => {
+    update = async(_id, archivo) => {
         try{
-            const actualiza = await this.products.findByIdAndUpdate(id, {
+            const actualiza = await this.cart.findByIdAndUpdate(_id, {
             mensaje: archivo.mensaje
             })
             return actualiza
         }catch(err){return err}
     }
     
-    delete = async(id) => {
+    delete = async(_id) => {
         try{
-            await UserModel.findByIdAndDelete(id)
-            const get = await this.productos.find()
+            await this.cart.findByIdAndDelete({ _id })
+            return get
+        }catch(err){return err}
+    }
+    deleteAll = async(_id) => {
+        try{
+            await this.cart.deleteMany()
             return get
         }catch(err){return err}
     }

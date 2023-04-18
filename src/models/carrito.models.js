@@ -1,6 +1,16 @@
 import { Schema } from "mongoose";
+import mongoose from 'mongoose'
+import dotenv from "dotenv"
 
-export const Carrito = new Schema({
+dotenv.config()
+
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+
+export const carritoSchema = new Schema({
     nombre: {
         type: String,
         required: true
@@ -9,18 +19,12 @@ export const Carrito = new Schema({
         type: Number,
         required: true
     },
-    descripción: {
-        type: Object,
-        required: true
-    },
     foto: {
         type: String,
         required: true,
     },
-    stock: {
-        type: Number,
-        required: true
-    }
 },{
     timestamps: true
 })
+
+export const  Carrito  = mongoose.model("Carrito", carritoSchema)

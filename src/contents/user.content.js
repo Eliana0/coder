@@ -13,7 +13,12 @@ class userContent {
             return user
         }catch(err){console.log(err)}
     }
-
+    findId = async(user_sid) => {
+        try{
+            let user = await this.use.findById({ _id }).exec()
+            return user
+        }catch(err){console.log(err)}
+    }
     newUser = async(name, mail, password, adress, age, number, img) => {
         try{
             let pass= password;
@@ -28,6 +33,12 @@ class userContent {
             })
             return user
         }catch(err){console.log(err)}
+    }
+    update = async(_id, productos) => {
+        try{
+            await this.products.findByIdAndUpdate(_id, { productos: productos })
+            return actualiza
+        }catch(err){return err}
     }
     deleteUser = async( mail ) => {
         let borrar = await this.use.findOneAndDelete({ mail }).exec()

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div method="post">
+        <%all.forEach(e => {%> 
+            <div style="border: 1px solid; width: 300px" method="post">
+                <div>
+                    <h3 name="nombre"><%= `${e.nombre}` %></h3>
+                    <h4 name="precio"><%= `precio: $${e.precio}` %></h4>
+                </div>
+                <button type="submit">Borrar</button>
+                <img src="<%= e.foto  %>" alt="" style= "width: 100px">
+            </div>
+            <% }) %>
+            <p name="precioFinal"><%= /* `${precioFinal}` */ %></p>
+            <a href="/buyCart"><button type="submit">Comprar</button></a>
+    </div>
+    </body>
+</html>

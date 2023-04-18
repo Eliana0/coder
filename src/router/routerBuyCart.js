@@ -3,9 +3,6 @@ import cartControllers from "../controllers/cartControllers.js";
 
 const router = express.Router();
 
-router.get('/', 
-        cartControllers.getAllCart,
-/*         cartControllers.addToCart, 
-        cartControllers.deleteProductCart */)
+router.get('/', cartControllers.buyCart)
 
 export default router;

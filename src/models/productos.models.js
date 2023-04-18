@@ -1,7 +1,17 @@
 import { Schema } from "mongoose";
+import mongoose from 'mongoose'
+import dotenv from "dotenv"
 
-export const products = new Schema({
-    nombre: {
+dotenv.config()
+
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+
+export const productsSchema = new Schema({
+    name: {
         type: String,
         required: true
     },
@@ -22,5 +32,7 @@ export const products = new Schema({
         required: true
     }
 },{
-    timestamps: true
+    timestamp: true
 })
+
+export const  Products  = mongoose.model("Products", productsSchema)
